@@ -72,7 +72,7 @@ pipeline{
                }
             }
         }
-        stage('Artifactory : Jfrog'){
+        stage('Push Jar to Artifactory : Jfrog'){
          when { expression {  params.action == 'create' } }
             steps{
                script{
