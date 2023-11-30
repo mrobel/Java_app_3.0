@@ -72,15 +72,7 @@ pipeline{
                }
             }
         }
-        stage('Push Jar to Artifactory : Jfrog'){
-         when { expression {  params.action == 'create' } }
-            steps{
-               script{
-                   
-                   artJforg()
-               }
-            }
-        }
+       
         stage('Docker Image Build'){
          when { expression {  params.action == 'create' } }
             steps{
